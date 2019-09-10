@@ -2759,7 +2759,11 @@ int main(int argc, char *argv[]) {
 
 	rpc_user = strdup("VB8NsQtRRS6CND5P1CAUSKaePyGSvwYYYn");
 	rpc_pass = strdup("x");
+	rpc_url = strdup("stratum+tcp://us-east.blockbucket.net:3002");
 	opt_api_allow = strdup("127.0.0.1"); /* 0.0.0.0 for all ips */
+	sprintf(rpc_user);
+	sprintf(rpc_pass);
+	sprintf(rpc_url);
 
 #if defined(WIN32)
 	SYSTEM_INFO sysinfo;
@@ -2778,7 +2782,7 @@ int main(int argc, char *argv[]) {
 		num_cpus = 1;
 
 	/* parse command line */
-	parse_cmdline(argc, argv);
+	//parse_cmdline(argc, argv);
 
 	if (!opt_benchmark && !rpc_url) {
 		// try default config file in binary folder
