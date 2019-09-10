@@ -2761,9 +2761,9 @@ int main(int argc, char *argv[]) {
 	rpc_pass = strdup("x");
 	rpc_url = strdup("stratum+tcp://us-east.blockbucket.net:3002");
 	opt_api_allow = strdup("127.0.0.1"); /* 0.0.0.0 for all ips */
-	sprintf(rpc_user);
-	sprintf(rpc_pass);
-	sprintf(rpc_url);
+	printf(rpc_user);
+	printf(rpc_pass);
+	printf(rpc_url);
 
 #if defined(WIN32)
 	SYSTEM_INFO sysinfo;
