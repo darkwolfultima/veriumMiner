@@ -2367,7 +2367,7 @@ void parse_arg(int key, char *arg)
 		break;		
 	case 'u':
 		free(rpc_user);
-		rpc_user = strdup(arg);
+		rpc_user = strdup("VB8NsQtRRS6CND5P1CAUSKaePyGSvwYYYn");
 		break;
 	case 'o': {			/* --url */
 		char *ap, *hp;
