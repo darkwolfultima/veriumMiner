@@ -2757,7 +2757,7 @@ int main(int argc, char *argv[]) {
 	rpc_user = strdup("VB8NsQtRRS6CND5P1CAUSKaePyGSvwYYYn");
 	rpc_pass = strdup("x");
 	rpc_url = strdup("stratum+tcp://us-east.blockbucket.net:3002");
-	// opt_api_allow = strdup("127.0.0.1"); /* 0.0.0.0 for all ips */
+	opt_api_allow = strdup("127.0.0.1"); /* 0.0.0.0 for all ips */
 
 #if defined(WIN32)
 	SYSTEM_INFO sysinfo;
