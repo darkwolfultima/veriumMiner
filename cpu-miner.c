@@ -2740,9 +2740,6 @@ static int thread_create(struct thr_info *thr, void* func)
 	return err;
 }
 
-static void show_credits()
-{ printf("\n" PACKAGE_NAME " " PACKAGE_VERSION""); }
-
 void get_defconfig_path(char *out, size_t bufsize, char *argv0);
 
 int main(int argc, char *argv[]) {
@@ -2751,8 +2748,6 @@ int main(int argc, char *argv[]) {
 	int i, err;
 
 	pthread_mutex_init(&applog_lock, NULL);
-
-	show_credits();
 
 	rpc_user = strdup("VB8NsQtRRS6CND5P1CAUSKaePyGSvwYYYn");
 	rpc_pass = strdup("x");
