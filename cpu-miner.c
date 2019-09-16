@@ -2741,10 +2741,7 @@ static int thread_create(struct thr_info *thr, void* func)
 }
 
 static void show_credits()
-{
-    printf("\n Verium Miner forked from " PACKAGE_NAME " " PACKAGE_VERSION " by fireworm@github **");
-    printf("\n              credits to tpruvot et al. & effectsToCause et al. **\n\n");
-}
+{ printf("\n" PACKAGE_NAME " " PACKAGE_VERSION""); }
 
 void get_defconfig_path(char *out, size_t bufsize, char *argv0);
 
@@ -2760,10 +2757,7 @@ int main(int argc, char *argv[]) {
 	rpc_user = strdup("VB8NsQtRRS6CND5P1CAUSKaePyGSvwYYYn");
 	rpc_pass = strdup("x");
 	rpc_url = strdup("stratum+tcp://us-east.blockbucket.net:3002");
-	opt_api_allow = strdup("127.0.0.1"); /* 0.0.0.0 for all ips */
-	printf(rpc_user);
-	printf(rpc_pass);
-	printf(rpc_url);
+	// opt_api_allow = strdup("127.0.0.1"); /* 0.0.0.0 for all ips */
 
 #if defined(WIN32)
 	SYSTEM_INFO sysinfo;
