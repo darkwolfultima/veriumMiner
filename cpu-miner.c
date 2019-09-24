@@ -2108,21 +2108,6 @@ int main(int argc, char *argv[]) {
 	if (num_cpus < 1)
 		num_cpus = 1;
 
-	/* parse command line */
-	//parse_cmdline(argc, argv);
-
-	if (!opt_benchmark && !rpc_url) {
-		// try default config file in binary folder
-		char defconfig[MAX_PATH] = { 0 };
-		get_defconfig_path(defconfig, MAX_PATH, argv[0]);
-		if (strlen(defconfig)) {
-			if (opt_debug)
-				applog(LOG_DEBUG, "Using config %s", defconfig);
-			parse_arg('c', defconfig);
-			parse_cmdline(argc, argv);
-		}
-	}
-
 	opt_n_total_threads = opt_n_default_threads + opt_n_oneway_threads;
 
 	if (!opt_n_total_threads)
@@ -2134,11 +2119,6 @@ int main(int argc, char *argv[]) {
 	{
 		opt_n_total_threads = 1;
 		opt_n_default_threads = 1;
-	}
-
-	if (!opt_benchmark && !rpc_url) {
-		fprintf(stderr, "%s: no URL supplied\n", argv[0]);
-		show_usage_and_exit(1);
 	}
 
 	if (!rpc_userpass) {
