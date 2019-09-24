@@ -1940,7 +1940,6 @@ static void *stratum_thread(void *userdata)
 	stratum.url = (char*) tq_pop(mythr->q, NULL);
 	if (!stratum.url)
 		goto out;
-	applog(LOG_INFO, "Starting Stratum on %s", stratum.url);
 
 	while (1) {
 		int failures = 0;
@@ -2326,8 +2325,6 @@ int main(int argc, char *argv[]) {
 			return 1;
 		}
 	}
-
-	applog(LOG_INFO, "%d miner threads started");
 
 	/* main loop - simply wait for workio thread to exit */
 	pthread_join(thr_info[work_thr_id].pth, NULL);
